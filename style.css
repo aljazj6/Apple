@@ -1,0 +1,228 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background: linear-gradient(135deg, #cccccc, #dcdcdc);
+    color: #333;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    background: rgba(34, 34, 34, 0.7);
+    padding: 20px 0;
+    transition: background 0.5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header:hover {
+    background: #c2c2c2;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li {
+    list-style: none;
+    margin: 0 18px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    transition: color 0.5s, transform 0.3s ease; /* Added transform for hover */
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    margin-top: 3px;
+}
+
+.nav ul li:hover a {
+    color: #c9c9c9;
+    transform: scale(1.1); /* Transform to enlarge icons */
+}
+
+.nav ul li i {
+    font-size: 24px; /* Adjust icon size */
+    transition: transform 0.3s ease; /* Smooth transition for icons */
+}
+
+.nav ul li:hover i {
+    transform: scale(1.2); /* Icons grow when hovered */
+}
+.canvas-logo {
+    position: absolute;
+    top: 50px; /* Adjust this value to position the canvas as desired */
+    right: 144%; /* Adjust this value to position the canvas as desired */
+    z-index: 10;
+}
+
+#appleCanvas {
+    border: 1px solid #852525; /* You can remove this once you are happy with the positioning */
+}
+
+.hero {
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: rgb(69, 165, 182);
+    text-align: center;
+    background: #f0f8ff;
+    padding: 50px 15px;
+}
+
+.hero h1 {
+    color: #333333;
+    font-size: 56px;
+    font-weight: 750;
+    margin-bottom: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.grid-detail {
+    background: #f9f9f9; /* Slightly different background color */
+    border: 1px solid #cccccc; /* Added a subtle border */
+    border-radius: 15px; /* Smooth rounded corners */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Stronger box shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+    text-align: center;
+    padding: 20px; /* Added padding for spacing inside the div */
+}
+
+.grid-detail img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners on the images for a soft look */
+}
+
+.grid-detail:hover {
+    transform: translateY(-10px); /* Stronger hover effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+    background-color: #e7e7e7; /* Subtle background color change on hover */
+    border-color: #94afb3; /* Border color change on hover for more emphasis */
+}
+
+.description {
+    font-size: 17px;
+    color: #333;
+    margin-top: 15px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+footer {
+    background-color: #f1f1f1; /* Light background for the footer */
+    padding: 20px 0;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between each link */
+}
+
+.footer-links li {
+    margin: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #007aff; /* Light blue on hover */
+}
+
+.footer-text {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+
+.footer-logo {
+    margin-top: 20px;
+}
+
+.apple-logo {
+    width: 180px; /* Increased size of the logo */
+    height: auto;
+}
+
+.icon-container {
+    position: absolute; /* Absolutno pozicioniranje */
+    top: 20px; /* Povečajte to vrednost, da bo višje */
+    right: 20px; /* Povečajte to vrednost, da bo bolj na desni strani */
+    color: #007aff;
+    padding: 10px;
+    border-radius: 50%; /* Dodajte za okrogel rob okoli ikone, če želite */
+}
+
+.icon-container svg {
+    width: 40px; /* Povečajte velikost SVG slike po potrebi */
+    height: 40px;
+}
+
+
